@@ -23,7 +23,7 @@ self.addEventListener("install",(event) =>{
     const promesaCache = caches.open(CACHE_STATIC_NAME)
     .then(cache =>{
         return cache.addAll([
-            '/',
+            '/PWA-U2-P3-DPNC',
             "index.html",
             "css/page.css",
             "image/inicio.png",
