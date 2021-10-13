@@ -1,5 +1,16 @@
+let url = window.location.href;
+let swDirect = '/PWA-U2-P3-DPNC/sw.js'
+
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/sw.js");
+  console.log("Si esta disponible")
+  if(url.includes('localhost')){
+    swDirect = '/sw.js'
+  }
+
+  navigator.serviceWorker.register(swDirect);
+  
+}else{
+  console.log("No esta disponible")
 }
 
 /* if (window.caches) {
